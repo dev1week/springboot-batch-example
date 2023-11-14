@@ -1,0 +1,13 @@
+spring:
+  batch:
+    job:
+      #job name ????? job? ?? ??? ?? ??? ??????.
+      names: ${job.name:NONE}
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/spring_batch
+      username: root
+      password: p@ssw0rd
+      driver-class-name: com.mysql.cj.jdbc.Driver
+batch:
+  initialize-schema: never
