@@ -4,10 +4,15 @@ spring:
       #job name ????? job? ?? ??? ?? ??? ??????.
       names: ${job.name:NONE}
   datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://127.0.0.1:3306/spring_batch
-      username: root
-      password: p@ssw0rd
-      driver-class-name: com.mysql.cj.jdbc.Driver
+#    hikari:
+#      jdbc-url: jdbc:mysql://127.0.0.1:3306/spring_batch
+#      username: ssafy
+#      password: ssafy
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.h2.Driver
+
+  sql:
+    init:
+      data-locations: classpath:person.sql
 batch:
   initialize-schema: never
